@@ -19,5 +19,5 @@ class FileNameStatusBar(sublime_plugin.EventListener):
     def on_activated(self, view):
         view.run_command('file_name_status_bar')
     def on_post_window_command(self, w, command_name, args):
-        if command_name == 'toggle_tabs' or command_name == 'toggle_distraction_free':
+        if command_name == 'toggle_tabs' or command_name == 'toggle_distraction_free' or command_name == 'toggle_full_screen':
             w.active_view().run_command('file_name_status_bar')
